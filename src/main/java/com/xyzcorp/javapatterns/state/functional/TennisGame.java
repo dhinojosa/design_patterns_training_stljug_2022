@@ -15,7 +15,6 @@ public record TennisGame(Player home, Player opponent) {
         return new TennisGame(home.losesTo(opponent), opponent.beats(home));
     }
 
-
     public String score() {
         return String.format("Home (%s): %s, Opponent(%s): %s", home.name(),
             home.score(), opponent.name(), opponent.score());
