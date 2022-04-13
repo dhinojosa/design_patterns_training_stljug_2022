@@ -1,4 +1,4 @@
-package com.xyzcorp.javapatterns.state;
+package com.xyzcorp.javapatterns.state.classic;
 
 public class OffState implements SwitchState {
     private SwitchStateContext context;
