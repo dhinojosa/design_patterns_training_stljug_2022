@@ -12,7 +12,7 @@ public class Programmer {
     private final LocalDate birthDate;
     private final Supplier<LocalDate> todaysDateSupplier;
 
-    public Programmer(String firstName,
+    protected Programmer(String firstName,
                       String lastName,
                       LocalDate birthDate,
                       Supplier<LocalDate> todaysDateSupplier) {
@@ -21,6 +21,10 @@ public class Programmer {
         this.lastName = lastName;
         this.birthDate = birthDate;
         this.todaysDateSupplier = todaysDateSupplier;
+    }
+
+    public static Programmer of(String firstName, String lastName, LocalDate birthDate) {
+        return new Programmer(firstName, lastName, birthDate, LocalDate::now);
     }
 
     public int getAge() {

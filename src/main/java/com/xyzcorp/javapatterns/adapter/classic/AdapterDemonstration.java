@@ -1,4 +1,7 @@
-package com.xyzcorp.javapatterns.adapter;
+package com.xyzcorp.javapatterns.adapter.classic;
+
+import com.xyzcorp.javapatterns.adapter.CelciusThermometer;
+import com.xyzcorp.javapatterns.adapter.FahrenheitThermometer;
 
 /**
  * @author John Ericksen

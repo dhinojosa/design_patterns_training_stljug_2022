@@ -6,12 +6,14 @@ public class Runner {
 
         TennisGame tennisGame = TennisGame.start(new Player("Salvador"),
             new Player("Rafael"));
-        TennisGame criticalMoment = tennisGame
-            .nextTurn((sal, rafael) -> rafael)
-            .nextTurn((sal, rafael) -> sal);
+
+        TennisGame tied = tennisGame
+            .nextTurn((sal1, rafael1) -> rafael1)
+            .nextTurn((sal1, rafael1) -> sal1);
+
 
         TennisGame resultGame =
-            criticalMoment
+            tied
                 .nextTurn((sal, rafael) -> rafael)
                 .nextTurn((sal, rafael) -> rafael)
                 .nextTurn((sal, rafael) -> sal)
@@ -20,13 +22,7 @@ public class Runner {
                 .nextTurn((sal, rafael) -> sal)
                 .nextTurn((sal, rafael) -> rafael);
 
-        TennisGame salDominates =
-            criticalMoment
-                .nextTurn((sal, rafael) -> sal)
-                .nextTurn((sal, rafael) -> sal)
-                .nextTurn((sal, rafael) -> sal);
-
+        System.out.println(tied.score());
         System.out.println(resultGame.score());
-        System.out.println(salDominates.score());
     }
 }

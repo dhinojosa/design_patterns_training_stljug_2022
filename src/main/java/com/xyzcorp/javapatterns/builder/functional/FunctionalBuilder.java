@@ -13,6 +13,7 @@ public class FunctionalBuilder {
         Function<String, Function<String, Person>> afterApplyingFirstName = f.apply("Thomas");
         Function<String, Person> afterApplyingMiddleName = afterApplyingFirstName.apply("Falco");
         Person person = afterApplyingMiddleName.apply("Dolby");
+        Person person1 = afterApplyingMiddleName.apply("Williams");
 
         System.out.println(person);
     }

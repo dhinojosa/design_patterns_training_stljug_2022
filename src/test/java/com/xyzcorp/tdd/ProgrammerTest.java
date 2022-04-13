@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ProgrammerTest {
@@ -41,4 +42,9 @@ public class ProgrammerTest {
         assertEquals(63, programmer.getAge());
     }
 
+    @Test
+    void testStaticMethodFactory() {
+        Programmer programmer = Programmer.of("James", "Gosling", LocalDate.of(1955, 5, 19));
+        assertThat(programmer).isNotNull();
+    }
 }
