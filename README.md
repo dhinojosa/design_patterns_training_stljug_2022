@@ -1,4 +1,4 @@
-# Design Patterns Training DevNexus 2022
+# Design Patterns Training Gateway JUG 2022
 
 ## Goals
 1. Hide Complexity from Users
